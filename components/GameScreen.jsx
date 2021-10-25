@@ -56,6 +56,11 @@ const GameScreen = () => {
       setSelected(cup.id === selected ? '' : cup.id);
       await delay(1000)
       alert(cup.empty ? 'You Win': 'You dead');
+
+      if ( !cup.empty ) {
+        show();
+      }
+      
       return;
     }
     setSelected(cup.id === selected ? '' : cup.id);
